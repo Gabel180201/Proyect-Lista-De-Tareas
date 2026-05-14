@@ -120,6 +120,59 @@ button:hover {
     box-shadow: 0 0 10px rgba(46, 213, 115, 0.5);
 }
 
+/* Media queries for mobile */
+@media (max-width: 768px) {
+    .container-tasklist {
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+
+    .Lista {
+        width: 90vw;
+        padding: 1vh;
+        max-height: calc(100vh - 40vh);
+    }
+
+    .Lista h1 {
+        font-size: 2rem;
+        margin-bottom: 1vh;
+    }
+
+    input {
+        width: 80%;
+        height: 3rem;
+        font-size: 1rem;
+        margin-bottom: 1vh;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .task-content {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .task-checkbox {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+
+    .btn-complete {
+        align-self: center;
+    }
+}
+
 
     
 

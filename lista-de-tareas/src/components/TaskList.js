@@ -54,6 +54,27 @@ function TaskList() {
     }
   };
 
+  const handleTouchStart = (index, e) => {
+    setDraggedIndex(index);
+    e.target.style.opacity = '0.5';
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault();
+  };
+
+  const handleTouchEnd = (targetIndex, e) => {
+    if (draggedIndex !== null && draggedIndex !== targetIndex) {
+      const newTasks = [...tasks];
+      const draggedTask = newTasks[draggedIndex];
+      newTasks.splice(draggedIndex, 1);
+      newTasks.splice(targetIndex, 0, draggedTask);
+      setTasks(newTasks);
+    }
+    setDraggedIndex(null);
+    e.target.style.opacity = '1';
+  };
+
   return (
     <div className="container-tasklist">
       <div className='Lista'>
@@ -74,6 +95,9 @@ function TaskList() {
               onDragStart={() => handleDragStart(index)}
               onDragOver={handleDragOver}
               onDrop={() => handleDrop(index)}
+              onTouchStart={(e) => handleTouchStart(index, e)}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={(e) => handleTouchEnd(index, e)}
               className={draggedIndex === index ? 'dragging' : ''}
               style={{ opacity: draggedIndex === index ? 0.5 : 1 }}
             >

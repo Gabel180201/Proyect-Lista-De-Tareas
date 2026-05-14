@@ -78,3 +78,30 @@ a:hover {
                  0 0 20px rgba(0, 212, 255, 0.6),
                  0 0 30px rgba(0, 212, 255, 0.4);
 }
+
+/* Media queries for mobile */
+@media (max-width: 768px) {
+    .Footer {
+        padding: 1vh 0;
+    }
+
+    .Footer p {
+        font-size: 0.9rem;
+        margin-bottom: 1vh;
+    }
+
+    .Footer nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    a {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .rocket-left,
+    .rocket-right {
+        font-size: 1.5rem;
+    }
+}
