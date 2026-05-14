@@ -7,7 +7,7 @@ function Objetivo() {
   const [nuevoRecordatorio, setNuevoRecordatorio] = useState('');
   const [fechaVencimiento, setFechaVencimiento] = useState('');
   const [prioridad, setPrioridad] = useState('media');
-  const [editandoId, setEditandoId] = useState(null);
+  const [, setEditandoId] = useState(null);
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState(null);
 
