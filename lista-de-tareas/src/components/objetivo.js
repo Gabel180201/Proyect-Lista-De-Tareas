@@ -12,7 +12,7 @@ function Objetivo() {
   const [error, setError] = useState(null);
 
   // URL base de la API (cambiar según tu backend)
-  const API_URL = 'http://localhost:5000/api/recordatorios';
+  const API_URL = 'https://proyect-lista-de-tareas.onrender.com/api/recordatorios';
 
   // Cargar recordatorios al montar el componente
   useEffect(() => {
