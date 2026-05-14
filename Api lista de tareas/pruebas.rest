@@ -1,0 +1,114 @@
+### PRUEBAS DE API - REST CLIENT
+### Instala la extensión "REST Client" en VS Code para ejecutar estas peticiones
+
+@baseUrl = http://localhost:5000/api
+
+###
+### ✅ HEALTH CHECK - Verificar que la API funciona
+GET http://localhost:5000/api/health
+
+###
+### 📋 GET - Obtener todos los recordatorios
+GET @baseUrl/recordatorios
+
+###
+### ➕ CREATE - Crear un nuevo recordatorio
+POST @baseUrl/recordatorios
+Content-Type: application/json
+
+{
+  "texto": "Estudiar Node.js y Express",
+  "fechaVencimiento": "2026-05-20",
+  "prioridad": "alta",
+  "completado": false
+}
+
+###
+### ➕ CREATE - Recordatorio con baja prioridad
+POST @baseUrl/recordatorios
+Content-Type: application/json
+
+{
+  "texto": "Ver una película",
+  "prioridad": "baja",
+  "completado": false
+}
+
+###
+### ➕ CREATE - Recordatorio sin fecha de vencimiento
+POST @baseUrl/recordatorios
+Content-Type: application/json
+
+{
+  "texto": "Leer documentación oficial",
+  "prioridad": "media"
+}
+
+###
+### 🔍 GET - Obtener un recordatorio específico (cambiar ID)
+GET @baseUrl/recordatorios/CAMBIAR_POR_ID_REAL
+
+###
+### ✏️ UPDATE - Marcar como completado
+PUT @baseUrl/recordatorios/CAMBIAR_POR_ID_REAL
+Content-Type: application/json
+
+{
+  "completado": true
+}
+
+###
+### ✏️ UPDATE - Cambiar prioridad
+PUT @baseUrl/recordatorios/CAMBIAR_POR_ID_REAL
+Content-Type: application/json
+
+{
+  "prioridad": "baja"
+}
+
+###
+### ✏️ UPDATE - Actualizar texto
+PUT @baseUrl/recordatorios/CAMBIAR_POR_ID_REAL
+Content-Type: application/json
+
+{
+  "texto": "Nuevo texto del recordatorio"
+}
+
+###
+### 🗑️ DELETE - Eliminar un recordatorio
+DELETE @baseUrl/recordatorios/CAMBIAR_POR_ID_REAL
+
+###
+### 🔗 FILTRO - Obtener por prioridad ALTA
+GET @baseUrl/recordatorios/filtro/prioridad/alta
+
+###
+### 🔗 FILTRO - Obtener por prioridad MEDIA
+GET @baseUrl/recordatorios/filtro/prioridad/media
+
+###
+### 🔗 FILTRO - Obtener por prioridad BAJA
+GET @baseUrl/recordatorios/filtro/prioridad/baja
+
+###
+### 🔗 FILTRO - Obtener recordatorios COMPLETADOS
+GET @baseUrl/recordatorios/filtro/completados
+
+###
+### 🔗 FILTRO - Obtener recordatorios PENDIENTES
+GET @baseUrl/recordatorios/filtro/pendientes
+
+###
+### 🗑️ DELETE - Eliminar TODOS los recordatorios (¡CUIDADO!)
+DELETE @baseUrl/recordatorios
+
+###
+
+### INSTRUCCIONES:
+### 1. Instala "REST Client" en VS Code (extensión)
+### 2. Abre este archivo en VS Code
+### 3. Haz clic en "Send Request" sobre cada petición
+### 4. Mira la respuesta en el panel de la derecha
+### 5. Cambia los IDs según los recordatorios reales de tu BD
+

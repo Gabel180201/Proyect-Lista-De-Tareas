@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>Lista de tareas</h1>
+        <input type="text" v-model="newTask" @keyup.enter="addTask" placeholder="Agregar nueva tarea">
+        <ul>
+            <li v-for="(task, index) in tasks" :key="index">
+                {{ task }}
+                <button @click="removeTask(index)">Eliminar</button>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

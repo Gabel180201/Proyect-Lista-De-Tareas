@@ -1,0 +1,52 @@
+{
+  "recordatorios": [
+    {
+      "texto": "Estudiar JavaScript avanzado",
+      "fechaVencimiento": "2026-05-15",
+      "prioridad": "alta",
+      "completado": false
+    },
+    {
+      "texto": "Revisar pull requests pendientes",
+      "fechaVencimiento": "2026-04-30",
+      "prioridad": "media",
+      "completado": false
+    },
+    {
+      "texto": "Actualizar documentación del proyecto",
+      "fechaVencimiento": "2026-05-10",
+      "prioridad": "media",
+      "completado": true
+    },
+    {
+      "texto": "Hacer ejercicio 30 minutos",
+      "fechaVencimiento": "2026-04-29",
+      "prioridad": "baja",
+      "completado": false
+    },
+    {
+      "texto": "Comprar ingredientes para la cena",
+      "fechaVencimiento": "2026-04-28",
+      "prioridad": "media",
+      "completado": false
+    },
+    {
+      "texto": "Llamar al dentista para cita",
+      "fechaVencimiento": "2026-05-01",
+      "prioridad": "alta",
+      "completado": false
+    },
+    {
+      "texto": "Backup de archivos importantes",
+      "fechaVencimiento": "2026-05-05",
+      "prioridad": "alta",
+      "completado": false
+    },
+    {
+      "texto": "Leer artículo sobre React Hooks",
+      "fechaVencimiento": null,
+      "prioridad": "baja",
+      "completado": false
+    }
+  ]
+}

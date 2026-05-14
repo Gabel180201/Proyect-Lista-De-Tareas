@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.container-tasklist {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 30vh;
+    width: 100vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.Lista {
+    position: relative;
+    z-index: 3;
+    background-color: #191A1B;
+    color: whitesmoke;
+    padding: 2vh;
+    border-radius: 1vh;
+    font-family: 'Orbitron', monospace;
+    width: 50vw;
+    text-align: center;
+    max-height: calc(100vh - 50vh);
+    overflow-y: auto;
+}
+
+.Lista h1 {
+    margin: 0 0 2vh 0;
+    font-size: 2.5vh;
+}
+
+input {
+    background-color: #333;
+    color: white;
+    width: 40vh;
+    height: 4vh;
+    text-align: center;
+    border: none;
+    border-radius: 0.5vh;
+    font-family: 'Orbitron', monospace;
+    margin-bottom: 2vh;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #444;
+    margin: 1vh 0;
+    padding: 1vh;
+    border-radius: 0.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.8vh;
+    cursor: move;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+li:hover {
+    border: 2px solid #00d4ff;
+    background-color: #555;
+}
+
+li.dragging {
+    opacity: 0.5;
+    border: 2px dashed #00d4ff;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    flex: 1;
+    text-align: left;
+}
+
+.task-checkbox {
+    width: 2vh;
+    height: 2vh;
+    cursor: pointer;
+    accent-color: #00d4ff;
+}
+
+.task-completed {
+    text-decoration: line-through;
+    color: #999;
+    opacity: 0.7;
+}
+
+button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 0.5vh 1vh;
+    border-radius: 0.3vh;
+    cursor: pointer;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.4vh;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff3742;
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5);
+}
+
+.btn-complete {
+    background-color: #2ed573;
+    white-space: nowrap;
+}
+
+.btn-complete:hover {
+    background-color: #26de81;
+    box-shadow: 0 0 10px rgba(46, 213, 115, 0.5);
+}
+
+
+    
+
